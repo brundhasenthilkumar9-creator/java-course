@@ -1,0 +1,53 @@
+class Student{
+    int rollno;
+    String name;
+    private String dept;
+    private String section;
+    int year;
+    public String getdept(){
+        return dept;
+    }
+      public void setdept(String dept){
+        this.dept=dept;
+    }
+     public String getsection(){
+         return section;
+     }
+     public void setsection(String section){
+         this.section=section;
+     }
+    
+    Student(int rollno,String name,String dept,String section,int year){
+        this.rollno=rollno;
+        this.name=name;
+        this.dept=dept;
+        this.section=section;
+        this.year=year;
+        
+    }
+    void display(){
+        System.out.println("roll no:"+rollno);
+        System.out.println("name:"+name);
+        System.out.println("dept:"+dept);
+        System.out.println("section:"+section);
+        System.out.println("year:"+year);
+        System.out.println();
+    }
+    
+    
+}
+public class Main{
+    public static void main(String[]args){
+        Student[]Students=new Student[3];
+        Students[0]=new Student(10,"alice","CSE","A",2);
+         Students[1]=new Student(12,"aice","ECE","A",4);
+         Students[2]=new Student(13,"abi","IT","B",3);
+          Students[0].setsection("C");
+          Students[1].setdept("CSE");
+        for(int i=0;i<Students.length;i++)
+        {
+            
+            Students[i].display();
+        }
+    }
+}
